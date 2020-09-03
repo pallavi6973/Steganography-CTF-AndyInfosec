@@ -46,9 +46,7 @@ def file7():
 @app.route('/Challenges/files/Research.zip/', methods=['GET', 'POST'])
 def file8():
 	return send_file('templates/files/Research.zip', attachment_filename='Research.zip')
-@app.route('/Challenges/files/README.txt/', methods=['GET', 'POST'])
-def file9():
-	return send_file('templates/files/README.txt', attachment_filename='README.txt')
+
 	
 @app.route('/submit/', methods=['GET','POST'])
 def submit():
