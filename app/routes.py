@@ -44,14 +44,12 @@ def file7():
 	return send_file('templates/files/see me.mp4', attachment_filename='see me.mp4')
 
 @app.route('/Challenges/files/Research.zip/', methods=['GET', 'POST'])
-@app.route('/Challenges/files/README.txt/', methods=['GET', 'POST'])
 def file8():
 	return send_file('templates/files/Research.zip', attachment_filename='Research.zip')
+@app.route('/Challenges/files/README.txt/', methods=['GET', 'POST'])
+def file9():
 	return send_file('templates/files/README.txt', attachment_filename='README.txt')
-
-
-
-
+	
 @app.route('/submit/', methods=['GET','POST'])
 def submit():
 	form = SubmitForm()
