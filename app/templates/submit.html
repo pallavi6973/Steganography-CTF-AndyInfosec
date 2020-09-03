@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <center>
+        <p style="font-size: 30px">
+            {{ form.flag.label }}<br>
+        </p>
+        <p>    
+            {{ form.flag(size=70) }}<br>
+            {% for error in form.flag.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p><br>
+        <h5> The flag will be in the format of "steg{.....}".</h5>
+        <p>{{ form.submit() }}</p>
+        </center>
+    </form>
+{% endblock %}
